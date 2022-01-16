@@ -38,3 +38,7 @@ int string::size(){
 // void string::clear(){
 //   this.resize(0);
 // }
+
+// char* string::c_str(){
+//   return this -> &s_;
+// }

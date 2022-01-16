@@ -16,11 +16,14 @@ int main() {
   string s2(s1) ;
   std::cout << s2.get_s() << std::endl;
 
-
   // Function clear
   // s2.clear();
   // std::cout << s2.get_s() << std::endl;
   // test impossible car pas encore la fonction resize()
+
+  // Function c_str()
+  // char* p1 = s1.c_str();
+  // std::cout << p1 << std::endl;
 
   return 0;
 }
