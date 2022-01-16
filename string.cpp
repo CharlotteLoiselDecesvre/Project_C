@@ -11,13 +11,18 @@ string::string(){
   // s_[6]='o';
   // s_[7]='r';
   // s_[8]='d';
-  s_[-1]='\0';
+  for(int i=0;i<len;i++){
+    s_[i]= ' ';
+  }
+  s_[len]='\0';
 }
 
 string::string(const string& p){
-  s_[0] = p.s_[0] ;
   len = p.len ;
-  len_max = p.len_max;
+  for(int i=0;i<len;i++){
+     s_[i]=p.s_[i];
+  }
+  s_[len] = p.s_[len];
 }
 
 // Functions and procedures definitions
@@ -29,3 +34,7 @@ char* string::get_s(){
 int string::size(){
   return len;
 }
+
+// void string::clear(){
+//   this.resize(0);
+// }

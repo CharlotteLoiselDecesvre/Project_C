@@ -2,7 +2,7 @@
 
 class string {
   protected:
-    char s_[0];
+    char s_[100];
     int len = sizeof s_ ;
     int len_max = 100;
   public:
@@ -10,5 +10,6 @@ class string {
     string(const string& p);
     char* get_s();
     int size();
+    //void clear();
 
 };
