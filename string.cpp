@@ -22,6 +22,6 @@ char* string::get_s(){
   return this -> s_;
 }
 
-// int string::size(){
-//   return len;
-// }
+int string::size(){
+  return len;
+}

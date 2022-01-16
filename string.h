@@ -8,6 +8,6 @@ class string {
   public:
     string();
     char* get_s();
-    //int size();
+    int size();
 
 };
