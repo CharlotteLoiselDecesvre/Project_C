@@ -6,5 +6,6 @@ class string {
   public:
     string();
     char* get_s();
+    // faire fonction print
 
 };

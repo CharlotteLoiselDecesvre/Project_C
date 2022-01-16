@@ -17,6 +17,7 @@ string::string(){
   s_[6]='o';
   s_[7]='r';
   s_[8]='d';
+  s_[9]='\0';
 }
 
 
@@ -25,3 +26,5 @@ string::string(){
 char* string::get_s(){
   return this -> s_;
 }
+
+// faire fonction print
