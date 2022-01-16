@@ -35,9 +35,12 @@ int string::size(){
   return len;
 }
 
-// void string::clear(){
-//   this.resize(0);
-// }
+void string::clear(){
+  for(int i=0;i<len;i++){
+    s_[i]= ' ';
+  }
+  s_[len]='\0';
+}
 
 // char* string::c_str(){
 //   return this -> &s_;

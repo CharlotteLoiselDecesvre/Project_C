@@ -10,7 +10,7 @@ class string {
     string(const string& p);
     char* get_s();
     int size();
-    //void clear();
+    void clear();
     //char* c_str();
 
 };
