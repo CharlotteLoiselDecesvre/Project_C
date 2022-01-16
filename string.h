@@ -7,6 +7,7 @@ class string {
     int len_max = 100;
   public:
     string();
+    string(const string& p);
     char* get_s();
     int size();
 

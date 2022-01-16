@@ -14,7 +14,11 @@ string::string(){
   s_[-1]='\0';
 }
 
-
+string::string(const string& p){
+  s_[0] = p.s_[0] ;
+  len = p.len ;
+  len_max = p.len_max;
+}
 
 // Functions and procedures definitions
 
