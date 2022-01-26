@@ -33,8 +33,9 @@ int main() {
   std::cout << s3.size() << std::endl;
 
   // Function c_str()
-  // char* p1 = s1.c_str();
-  // std::cout << p1 << std::endl;
+  string s5 = s4.c_str();
+  s5.get_s();
+  std::cout << s5.size() << std::endl;
 
   return 0;
 }

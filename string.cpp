@@ -63,9 +63,9 @@ void string::clear(){
   len = 0;
 }
 
-// char* string::c_str(){
-//   return this -> &s_;
-// }
+char* string::c_str(){
+  return this->s_;
+}
 
 /*void string::resize(int n, char c){
   if (n > this -> len){
