@@ -7,7 +7,7 @@ class string {
     const int len_max = 100 ;
   public:
     string();
-    //string(const string& p);
+    string(const string& p);
     string(const char* str);
     ~string();
     char get_s();

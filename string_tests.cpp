@@ -23,8 +23,9 @@ int main() {
   std::cout << s3.size() << std::endl;
 
   // Copy Constructor
-  //string s2(s1) ;
-  //std::cout << s2.get_s() << std::endl;
+  string s4(s3) ;
+  s4.get_s();
+  std::cout << s4.size() << std::endl;
 
   //Function clear
   //s2.clear();

@@ -24,13 +24,17 @@ string::~string(){
   delete s_;
 }
 
-/*string::string(const string& p){
-  //len = p.len ;
+string::string(const string& p){
+  // allocate the memory
+  s_ = new char[len_max];
+  len = p.len ;
+  // copy the value from the passed object
+  *s_=*p.s_;
   for(int i=0;i<len;i++){
      s_[i]=p.s_[i];
   }
   s_[len] = p.s_[len];
-}*/
+}
 
 // Functions and procedures definitions
 
