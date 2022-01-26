@@ -28,8 +28,9 @@ int main() {
   std::cout << s4.size() << std::endl;
 
   //Function clear
-  //s2.clear();
-  //std::cout << s2.get_s() << std::endl;
+  s3.clear();
+  s3.get_s();
+  std::cout << s3.size() << std::endl;
 
   // Function c_str()
   // char* p1 = s1.c_str();

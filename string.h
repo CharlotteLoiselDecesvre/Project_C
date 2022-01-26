@@ -12,7 +12,7 @@ class string {
     ~string();
     char get_s();
     int size();
-    //void clear();
+    void clear();
     //char* c_str();
     //int length();
     //void resize(int n, char c);
