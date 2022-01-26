@@ -37,5 +37,10 @@ int main() {
   s5.get_s();
   std::cout << s5.size() << std::endl;
 
+  // Operator=(char c)
+  // s2="R";  // s3="Hello" et s2="n"
+  // s2.get_s();
+  // std::cout << s2.size() << std::endl;
+
   return 0;
 }

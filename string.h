@@ -4,7 +4,7 @@ class string {
   protected:
     char* s_;
     int len ;
-    const int len_max = 100 ;
+    static const int len_max = 100 ;
   public:
     string();
     string(const string& p);
@@ -14,6 +14,7 @@ class string {
     int size();
     void clear();
     char* c_str();
+    //string& operator=(char c);
     //int length();
     //void resize(int n, char c);
 

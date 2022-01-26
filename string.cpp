@@ -36,6 +36,16 @@ string::string(const string& p){
   s_[len] = p.s_[len];
 }
 
+// Operators definitions
+
+// string& string::operator=(char c){
+//   len = 1;
+//   s_ = new char(c);
+//   return *this;
+// }
+
+
+
 // Functions and procedures definitions
 
 char string::get_s(){
