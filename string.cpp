@@ -64,9 +64,9 @@ int string::size(){
   return len;
 }
 
-/*int string::length(){
+int string::length(){
   return len;
-}*/
+}
 
 void string::clear(){
   s_ = nullptr;
@@ -77,15 +77,20 @@ char* string::c_str(){
   return this->s_;
 }
 
-/*void string::resize(int n, char c){
-  if (n > this -> len){
-    this -> clear();
-    for(int i = 0; i<n; i++){
-      this->s_[i] = this->s_[i];
+/*void string::resize(int n, const char *c){
+  std::cout << "A" << std::endl;
+  if (n < this -> length()){
+    std::cout << "B1" << std::endl;
+    //for(int i = 0; i<n; i++){
+       //s_[i] = ' ';
+       memcpy(s_,s_,n);
+       std::cout << ->c_str() << std::endl;
     }
-  }
-  if (n < this -> len){
+  //}
+  /*if (n > this -> len){
+    std::cout << "B2" << std::endl;
     for(int i = len; i<n; i++){
+      std::cout << "C2" << std::endl;
       this->s_[i] = c;
     }
   }
