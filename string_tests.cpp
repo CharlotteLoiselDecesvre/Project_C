@@ -41,7 +41,8 @@ int main() {
 
   //Function resize()
   s6.get_s();
-  //s6.resize(3,"n");
+  s6.resize(6,'n');
+  s6.get_s();
 
   // Operator=(char c)
   // s2="R";  // s3="Hello" et s2="n"

@@ -63,8 +63,7 @@ char string::get_s(){
 int string::size(){
   return len;
 }
-
-int string::length(){
+size_t string::length() const{
   return len;
 }
 
@@ -77,21 +76,26 @@ char* string::c_str(){
   return this->s_;
 }
 
-/*void string::resize(int n, const char *c){
+void string::resize(size_t n, char c){
+  string s_(s_bis);
   std::cout << "A" << std::endl;
-  if (n < this -> length()){
+  if (n < this->length()){
     std::cout << "B1" << std::endl;
-    //for(int i = 0; i<n; i++){
-       //s_[i] = ' ';
-       memcpy(s_,s_,n);
-       std::cout << ->c_str() << std::endl;
-    }
-  //}
-  /*if (n > this -> len){
-    std::cout << "B2" << std::endl;
-    for(int i = len; i<n; i++){
-      std::cout << "C2" << std::endl;
-      this->s_[i] = c;
+    for(len = this->length(); len > n; len--){
+      std::cout << "C1" << std::endl;
+      s_bis[len]='\0';
     }
   }
-}*/
+  /*else if (n > this -> length()){
+    std::cout << "B2" << std::endl;
+    for(len = this->length(); len < n; len++){
+      std::cout << "C2" << std::endl;
+          s_bis[len+1]='\0';
+          s_bis[len]=c;
+      }
+      s_bis[len]='\0';
+    }*/
+    else{
+     std::cout << " Même taille : " << this->length() << std::endl;
+   }
+}

@@ -5,6 +5,7 @@ class string {
     char *s_;
     int len ;
     static const int len_max = 100 ;
+    char s_bis[100];
   public:
     string();
     string(const string& p);
@@ -15,7 +16,10 @@ class string {
     void clear();
     char* c_str();
     //string& operator=(char c);
-    int length();
-    void resize(int n,const char*  c);
+    size_t length() const;
+    size_t max_size() const;
+    void resize(size_t n,char c);
+    //string& operator= (const string& str);
+    //string operator+ (const string& lhs, const string& rhs);
 
 };
