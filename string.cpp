@@ -38,11 +38,12 @@ string::string(const string& p){
 
 // Operators definitions
 
-// string& string::operator=(char c){
-//   len = 1;
-//   s_ = new char(c);
-//   return *this;
-// }
+string& string::operator=(char c){
+  this->s_[0]= c;
+  this->s_[1]='\0';
+  this->len=1;
+  return *this;
+}
 
 
 
@@ -59,6 +60,7 @@ char string::get_s(){
   std::cout << '@' << std::endl;
   return 0 ;  //return char('@');
 }
+
 
 int string::size(){
   return len;
