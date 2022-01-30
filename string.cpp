@@ -90,7 +90,7 @@ void string::clear(){
 char* string::c_str(){
   return this->s_;
 }
-
+// student c 
 void string::resize(size_t n, char c){
   string s_(s_bis);
   std::cout << "A" << std::endl;
