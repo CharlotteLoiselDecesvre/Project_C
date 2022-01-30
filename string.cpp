@@ -8,7 +8,7 @@ string::string(){
   s_ = nullptr;
   len = 0;
 }
-
+// test student c
 string::string(const char* str){
   s_ = new char[len_max];
   int i=0;
