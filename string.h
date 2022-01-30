@@ -21,7 +21,10 @@ class string {
     void resize(size_t n,char c);
 
     string& operator=(char c);
+    //friend string& operator+(const string& lhs, const char* rhs);
     //string& operator= (const string& str);
     //string operator+ (const string& lhs, const string& rhs);
 
 };
+
+//string& operator+(const string& lhs, const char* rhs);

@@ -50,5 +50,12 @@ int main() {
   s2.get_s();
   std::cout << s2.size() << std::endl;
 
+  // // Operator+(const char*)
+  // char* c2 = new char('W');
+  // s1=s6+c2;
+  // s1.get_s();
+  // std::cout << s1.size() << std::endl;
+  // delete c2;
+
   return 0;
 }

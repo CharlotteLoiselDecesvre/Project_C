@@ -45,6 +45,20 @@ string& string::operator=(char c){
   return *this;
 }
 
+// string& operator+(const string& lhs, const char* rhs){
+//   string str(lhs);
+//   str.len+=1;
+//   str.s_[str.len-1]=*rhs;
+//   str.s_[str.len]='\0';
+//   return str;
+//
+//
+//   // this->len=lhs.len+1;
+//   // memcpy(this->s_,lhs, lhs.len);
+//   // this->s_[len-1]= *rhs;
+//   // this->s_[len]='\0';
+//   // return *this;
+// }
 
 
 // Functions and procedures definitions
@@ -57,10 +71,9 @@ char string::get_s(){
     std::cout << ' ' << std::endl;
     return 0;
   }
-  std::cout << '@' << std::endl;
-  return 0 ;  //return char('@');
+  std::cout << "empty string" << std::endl;
+  return 0 ;
 }
-
 
 int string::size(){
   return len;
