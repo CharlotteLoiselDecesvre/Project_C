@@ -9,7 +9,7 @@ class string {
   public:
     // Data member
     char* s_;
-    int len ; 
+    int len ;
 
     // Constructor
     string();

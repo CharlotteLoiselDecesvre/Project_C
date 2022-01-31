@@ -9,7 +9,7 @@ string::string(){
   len = 0;
   Capacity=0;
 }
-// test student c
+
 string::string(const char* str){
     int i=0;
     while (str[i]!='\0'){
@@ -39,15 +39,6 @@ string::string(const string& p){
      s_[i]=p.s_[i];
   }
   s_[len] = p.s_[len];
-}
-
-// Operators definitions
-
-string& string::operator=(char c){
-  this->s_[0]= c;
-  this->s_[1]='\0';
-  this->len=1;
-  return *this;
 }
 
 // Functions and procedures definitions
@@ -136,6 +127,14 @@ void string::reserve(size_t n) {
     len=std::max(std::min(NEW_CAPACITY-1,len),0);
 }
 
+// Operators definitions
+
+string& string::operator=(char c){
+  this->s_[0]= c;
+  this->s_[1]='\0';
+  this->len=1;
+  return *this;
+}
 
 string &string::operator=(const char *str) {
     int i=0;
