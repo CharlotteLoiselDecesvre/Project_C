@@ -3,14 +3,12 @@
 class string {
   protected:
     // Data member
+    char* s_;
+    int len ;
     int len_max = 100 ;
     char s_bis[100];
     int Capacity;
   public:
-    // Data member
-    char* s_;
-    int len ;
-
     // Constructor
     string();
     string(const string& p);

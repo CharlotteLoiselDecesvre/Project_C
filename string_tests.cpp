@@ -103,27 +103,27 @@ int main() {
   std::cout <<"\ts7 has a memory capacity of :" << s7.capacity() <<std::endl;
 
   std::cout <<"test operator+(const string&, const string&) : "<< std::endl;
-  s7 = s5 + s5;
-  std::cout <<"\ts7 = "<< s7.get_schar() << std::endl;
-  std::cout <<"\ts7 has a length of :"<< s7.length() << std::endl;
-  std::cout <<"\ts7 has a memory capacity of :" << s7.capacity() <<std::endl;
+  string s8 = string("Hello") + string(" you");
+  std::cout <<"\ts8 = "<< s8.get_schar() << std::endl;
+  std::cout <<"\ts8 has a length of :"<< s8.length() << std::endl;
+  std::cout <<"\ts8 has a memory capacity of :" << s8.capacity() <<std::endl;
 
   std::cout <<"test operator+(const string&, const char*): "<< std::endl;
   char* a=new char('c');
-  s7 = s5+a ;
-  std::cout <<"\ts7 = "<< s7.get_schar() << std::endl;
-  std::cout <<"\ts7 has a length of :"<< s7.length() << std::endl;
-  std::cout <<"\ts7 has a memory capacity of :" << s7.capacity() <<std::endl;
+  string s9 = s5+a ;
+  std::cout <<"\ts9 = "<< s9.get_schar() << std::endl;
+  std::cout <<"\ts9 has a length of :"<< s9.length() << std::endl;
+  std::cout <<"\ts9 has a memory capacity of :" << s9.capacity() <<std::endl;
 
   // Test DESTRUCTOR
   std::cout <<std::endl<< "--------- test destructor ---------" << std::endl;
-  std::cout <<"\tWe create s8 "<< std::endl;
-  string * s8=new string("Hello");
+  std::cout <<"\tWe create s10 "<< std::endl;
+  string * s10=new string("Hello");
 
-  std::cout <<"\ts8 = "<< s8->get_schar() << std::endl;
-  std::cout <<"\tWe try to delete s8 using the destructor"<< std::endl;
-  s8->~string();
-  std::cout <<"\ts8 = "<< s8->get_schar() << std::endl;
+  std::cout <<"\ts10 = "<< s10->get_schar() << std::endl;
+  std::cout <<"\tWe try to delete s10 using the destructor"<< std::endl;
+  s10->~string();
+  std::cout <<"\ts10 = "<< s10->get_schar() << std::endl;
 
   return 0;
 }

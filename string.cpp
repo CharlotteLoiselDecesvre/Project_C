@@ -46,7 +46,7 @@ string::string(const string& p){
 char* string::get_schar() const{
     if (!this->empty())
         return s_;
-    char *temp = "empty string";
+    char *temp = (char*) "empty string";
     return temp;
 }
 
@@ -147,13 +147,12 @@ string &string::operator=(const char *str) {
     Capacity=i+1;
     memcpy(s_,str, len);
     this->s_[len]='\0';
-
     return *this;
 }
 
 string operator+(const string& str, const char* rhs ){
-    char* s_=str.s_;
-    int len = str.len;
+    char * s_=str.get_schar();
+    int len = str.length();
     char * newStr=new char[len+2];
     memcpy(newStr,s_, len);
     newStr[len]= * rhs;
@@ -162,14 +161,14 @@ string operator+(const string& str, const char* rhs ){
 }
 
 string operator+(const string& str,const string &rhs) {
-    int N=str.len+ rhs.len;
+    int N=str.length()+ rhs.length();
     char *newstr =new char[N+1];
     char a;
     for (int i =0;i<N;i++){
-        if (i<str.len) {
-            a= str.s_[i];
+        if (i<str.length()) {
+            a= str.get_schar()[i];
         }else{
-            a= rhs.s_[i-str.len];
+            a= rhs.get_schar()[i-str.length()];
         }
         newstr[i]=a;
     }
