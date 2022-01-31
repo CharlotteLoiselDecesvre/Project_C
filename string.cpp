@@ -84,7 +84,7 @@ void string::resize(size_t n, char c){
           s_[len+1]='\0';
           s_[len]=c;
       }
-      s_bis[len]='\0';
+      s_[len]='\0';
   }
   else{
   std::cout << " It is the same size : " << this->length() << std::endl;
@@ -136,6 +136,14 @@ string& string::operator=(char c){
   return *this;
 }
 
+string &string::operator= (const string &str){
+  this->Capacity=str.len+1;
+  this->s_=new char [str.len+1];
+  this->len=str.len;
+  memcpy(s_,str.s_,len);
+  return *this;
+}
+
 string &string::operator=(const char *str) {
     int i=0;
     while (str[i]!='\0'){
@@ -150,12 +158,24 @@ string &string::operator=(const char *str) {
     return *this;
 }
 
+
+
 string operator+(const string& str, const char* rhs ){
     char * s_=str.get_schar();
     int len = str.length();
     char * newStr=new char[len+2];
     memcpy(newStr,s_, len);
     newStr[len]= * rhs;
+    newStr[len+1]='\0';
+    return {newStr};
+}
+
+string operator+(const string& str, char rhs ){
+    char * s_=str.get_schar();
+    int len = str.length();
+    char * newStr=new char[len+2];
+    memcpy(newStr,s_, len);
+    newStr[len]= rhs;
     newStr[len+1]='\0';
     return {newStr};
 }

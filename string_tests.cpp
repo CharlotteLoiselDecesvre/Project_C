@@ -65,7 +65,7 @@ int main() {
   s6.resize(5,'n');
   std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
 
-  /*
+
   // Test CAPACITY EMPTY AND RESERVE
   char test1[] = "Some string";
 
@@ -108,6 +108,12 @@ int main() {
   std::cout << "\ts2 = "<< s2.get_schar() << std::endl;
   std::cout << "\ts2 has a length of :"<< s2.size() << std::endl;
 
+  std::cout <<"test operator=(const string& str) : "<< std::endl;
+  string s15("Biosciences");
+  s6=s15;
+  std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
+  std::cout << "\ts6 has a length of :"<< s6.size() << std::endl;
+
   std::cout <<"test operator=(const char*) : "<< std::endl;
   s7=test1;
   std::cout <<"\ts7 = "<< s7.get_schar() << std::endl;
@@ -119,6 +125,11 @@ int main() {
   std::cout <<"\ts8 = "<< s8.get_schar() << std::endl;
   std::cout <<"\ts8 has a length of :"<< s8.length() << std::endl;
   std::cout <<"\ts8 has a memory capacity of :" << s8.capacity() <<std::endl;
+
+  std::cout <<"test operator+(const string&, char): "<< std::endl;
+  string s16 = s5+c1 ;
+  std::cout <<"\ts9 = "<< s16.get_schar() << std::endl;
+  std::cout <<"\ts9 has a memory capacity of :" << s16.capacity() <<std::endl;
 
   std::cout <<"test operator+(const string&, const char*): "<< std::endl;
   char* a=new char('c');
@@ -136,6 +147,6 @@ int main() {
   std::cout <<"\tWe try to delete s10 using the destructor"<< std::endl;
   s10->~string();
   std::cout <<"\ts10 = "<< s10->get_schar() << std::endl;
-*/
+
   return 0;
 }

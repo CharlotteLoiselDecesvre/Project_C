@@ -31,9 +31,10 @@ class string {
 
     // Operator :
     string& operator= (const char* s);
-    //string& operator= (const string& str);
+    string& operator= (const string& str);
     string& operator= (char c);
 
 };
 string operator+(const string& str, const char* rhs);
+string operator+(const string&, char rhs);
 string operator+(const string& str, const string& rhs);
