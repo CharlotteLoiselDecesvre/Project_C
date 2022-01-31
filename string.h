@@ -2,44 +2,40 @@
 
 class string {
   protected:
-
-     int len_max = 100 ;
+    // Data member
+    int len_max = 100 ;
     char s_bis[100];
-
     int Capacity;
   public:
-
+    // Data member
     char* s_;
-    //char s_[100];
-    int len = sizeof s_ ;
+    int len ; 
+
+    // Constructor
     string();
     string(const string& p);
     string(const char* str);
+
+    // Destructor
     ~string();
 
-    char get_s();
+    // Procedures and functions
     char* get_schar() const;
-    int size();
+    int size() const;
     void clear();
     char* c_str();
     int  length() const;
     int max_size() const;
     void resize(size_t n,char c);
-
     bool empty() const ;
     void reserve (size_t n = 0);
     int capacity() const ;
 
-
-    //friend string& operator+(const string& lhs, const char* rhs);
-    //string& operator= (const string& str);
-    //string operator+ (const string& lhs, const string& rhs);
-
-    //operator= :
+    // Operator :
     string& operator= (const char* s);
     string& operator=(char c);
+    //string& operator= (const string& str);
 
 };
 string operator+(const string& str, const char* rhs);
 string operator+(const string& str, const string& rhs);
-
