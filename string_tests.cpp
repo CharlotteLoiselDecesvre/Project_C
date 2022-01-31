@@ -128,8 +128,8 @@ int main() {
 
   std::cout <<"test operator+(const string&, char): "<< std::endl;
   string s16 = s5+c1 ;
-  std::cout <<"\ts9 = "<< s16.get_schar() << std::endl;
-  std::cout <<"\ts9 has a memory capacity of :" << s16.capacity() <<std::endl;
+  std::cout <<"\ts16 = "<< s16.get_schar() << std::endl;
+  std::cout <<"\ts16 has a memory capacity of :" << s16.capacity() <<std::endl;
 
   std::cout <<"test operator+(const string&, const char*): "<< std::endl;
   char* a=new char('c');
