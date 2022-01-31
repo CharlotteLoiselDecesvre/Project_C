@@ -46,14 +46,26 @@ int main() {
   std::cout << "\ts5 = "<< s5.get_schar() << std::endl;
   std::cout << "\ts5 has a length of :" << s5.size() << std::endl;
 
+  // Test max_size
+  std::cout << "--------- test max_size() ---------" << std::endl;
+  std::cout << "We look for max size of a string for example s6" << std::endl;
+  std::cout << s6.max_size() << std::endl;
+
   //Test RESIZE()
   std::cout << "--------- test resize() ---------" << std::endl;
-  std::cout << "We resize s6 " << std::endl;
+  std::cout << "We are going to resize s6 in 3 different ways : " << std::endl;
   std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
-  s6.resize(6,'n');
+  std::cout << "We  add the character n to reach size 10 :" << std::endl;
+  s6.resize(10,'n');
+  std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
+  std::cout << "We delete characters to go back to size 5 :" << std::endl;
+  s6.resize(5,'n');
+  std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
+  std::cout << "If we put the same size that the string has already, nothing is happening :" << std::endl;
+  s6.resize(5,'n');
   std::cout << "\ts6 = "<< s6.get_schar() << std::endl;
 
-
+  /*
   // Test CAPACITY EMPTY AND RESERVE
   char test1[] = "Some string";
 
@@ -124,6 +136,6 @@ int main() {
   std::cout <<"\tWe try to delete s10 using the destructor"<< std::endl;
   s10->~string();
   std::cout <<"\ts10 = "<< s10->get_schar() << std::endl;
-
+*/
   return 0;
 }

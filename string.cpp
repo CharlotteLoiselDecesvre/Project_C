@@ -1,5 +1,6 @@
 #include<iostream>
 #include <cstring>
+#include<math.h>
 #include "string.h"
 
 // Constructors definitions
@@ -67,27 +68,26 @@ char* string::c_str(){
   return this->s_;
 }
 
+float string::max_size(){
+  float max_size = pow(2,__WORDSIZE); //Nbre de bits à la puissance 2
+  return max_size;
+}
+
 void string::resize(size_t n, char c){
-  string s_(s_bis);
-  std::cout << "A" << std::endl;
   if (n < this->length()){
-    std::cout << "B1" << std::endl;
     for(len = this->length(); len > n; len--){
-      std::cout << "C1" << std::endl;
-      s_bis[len]='\0';
+      s_[len]='\0';
     }
   }
-  /*else if (n > this -> length()){
-    std::cout << "B2" << std::endl;
-    for(len = this->length(); len < n; len++){
-      std::cout << "C2" << std::endl;
-          s_bis[len+1]='\0';
-          s_bis[len]=c;
+  else if (n > this -> length()){
+    for(len = this->length(); len <= n; len++){
+          s_[len+1]='\0';
+          s_[len]=c;
       }
       s_bis[len]='\0';
-    }*/
-    else{
-     std::cout << " Même taille : " << this->length() << std::endl;
+  }
+  else{
+  std::cout << " It is the same size : " << this->length() << std::endl;
    }
 }
 

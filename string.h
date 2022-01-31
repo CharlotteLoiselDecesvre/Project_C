@@ -23,7 +23,7 @@ class string {
     void clear();
     char* c_str();
     int  length() const;
-    int max_size() const;
+    float max_size();
     void resize(size_t n,char c);
     bool empty() const ;
     void reserve (size_t n = 0);
@@ -31,8 +31,8 @@ class string {
 
     // Operator :
     string& operator= (const char* s);
-    string& operator=(char c);
     //string& operator= (const string& str);
+    string& operator= (char c);
 
 };
 string operator+(const string& str, const char* rhs);
