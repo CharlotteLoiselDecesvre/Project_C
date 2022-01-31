@@ -24,10 +24,10 @@ class string {
     char* c_str();
     int  length() const;
     int max_size() const;
-    void resize(int n,char c);
+    void resize(size_t n,char c);
 
     bool empty() const ;
-    void reserve (int n = 0);
+    void reserve (size_t n = 0);
     int capacity() const ;
 
 

@@ -104,7 +104,7 @@ char* string::c_str(){
   return this->s_;
 }
 // student c 
-void string::resize(int n, char c){
+void string::resize(size_t n, char c){
   string s_(s_bis);
   std::cout << "A" << std::endl;
   if (n < this->length()){
@@ -143,7 +143,7 @@ bool string::empty() const  {
     }
 }
 
-void string::reserve(int n) {
+void string::reserve(size_t n) {
     // n is the new capacity of the string
     int MAX_CAPACITY =len_max+1;
     int MIN_CAPACITY = 1;
